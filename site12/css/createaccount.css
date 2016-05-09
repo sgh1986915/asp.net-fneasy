@@ -1,0 +1,55 @@
+﻿#signup_con{ margin-left:auto; margin-right:auto; width:80%; padding:0 10% 0 10%;}
+#signup_con table{ width:100%;}
+#signup_con table tr td{ border:none;    text-align:left;   height:30px;  vertical-align:text-bottom; }
+#signup_con table tr td > input{width:80%; background-color:#fffdfd;  height:22px; border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px; -ie-border-radius:3px; border:1px solid silver; }
+.signuptxt{width:80%;  border:1px solid silver; border-radius:3px; -webkit-border-radius:3px;-moz-border-radius:3px; -ie-border-radius:3px;}
+/*button start here*/
+/*same Desgin used for SignUp.. Buy a Package page */
+.signup_btn{ padding: 4px 8px;
+text-shadow: 1px 1px 0 white;
+width: auto;
+color: #333;
+border: solid 1px #7B7B7B;
+background: white;
+background: -webkit-gradient(linear,left top,left bottom,from(white),to(#EDEDED));
+background: -moz-linear-gradient(top,white,#EDEDED);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#ededed');
+border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px; 
+-ie-border-radius:3px;
+}
+.signup_btn:hover{ cursor:pointer;
+                   background: -webkit-gradient(linear,left top,left bottom,from(#EDEDED),to(white));
+background: -moz-linear-gradient(top,#EDEDED,white);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed',endColorstr='#ffffff');
+                  
+                   }
+.btn_con input{width:100px; height:25px;}
+.btn_con{  text-align:right; padding:0px;}
+/*button end here*/
+#signup_con table tr td.td1{width:30%;  text-align:right;color:Gray; }
+#signup_con table tr td.td2{width:50%; padding:5px 5px 5px 5px;  text-align:left;color:Gray; background-color:#e9f3dd; border:3px solid #fff; border-radius:10px; -webkit-border-radius:10px;-moz-border-radius:10px; -ie-border-radius:10px; vertical-align:middle;}
+#signup_con table tr td.td2 span{ color:Red;  vertical-align:top;}
+#signup_con table tr td.td1 p{ vertical-align:top; margin-top:8px;}
+
+/*Section for SignUp Page. Page view name:- Select Package*/
+#package_con{ margin-top:15px; width:300px; padding:15px;  margin-left:auto; margin-right:auto; border:1px solid #f2f2f2; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px; background-color:#e9f3dd; background-color:rgba(233,243,221,0.5); box-shadow:5px 5px #999; -webkit-box-shadow:5px 5px 5px #999; -moz-box-shadow:5px 5px #999;}
+#package_con ul{ list-style-type:none; padding:0; margin:0;}
+.btn_con_s{ margin-top:10px; text-align:right; padding:0px;}
+.btn_con_s input{width:100px; height:25px;}
+.package_info{ color:Black;}
+/*section for create account two page*/
+#activate_con{ margin-top:15px; height:200px; width:300px; margin-left:auto; margin-right:auto; padding:15px; border:1px solid #f2f2f2; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px; background-color:#e9f3dd; background-color:rgba(233,243,221,0.5); box-shadow:5px 5px #999; -webkit-box-shadow:5px 5px 5px #999; -moz-box-shadow:5px 5px #999;}
+#activate_con ul li{ width:auto; float:left; padding:5px;}
+#activate_con ul{ list-style-type:none;}
+.active_label{ vertical-align:top; margin-top:5px;}
+.signuptxt2{width:100%;  height:22px; border:1px solid silver; border-radius:3px; -webkit-border-radius:3px;-moz-border-radius:3px; -ie-border-radius:3px;}
+#or_con{ width:270px; }
+/*reset pass*/
+#reset_pass{ margin-left:auto; margin-right:auto; width:80%; padding:0 10% 0 10%;}
+#reset_pass table{ width:78%;}
+#reset_pass table tr td{ border:none;    text-align:left;   height:30px;  vertical-align:text-bottom; }
+#reset_pass table tr td > input{width:80%; background-color:#fffdfd;  height:22px; border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px; -ie-border-radius:3px; border:1px solid silver; }
+#reset_pass table tr td.td1{width:30%;  text-align:right;color:Gray; }
+#reset_pass table tr td.td2{width:50%; padding:5px 5px 5px 5px;  text-align:left;color:Gray; background-color:#e9f3dd; border:3px solid #fff; border-radius:10px; -webkit-border-radius:10px;-moz-border-radius:10px; -ie-border-radius:10px; vertical-align:middle;}
+#reset_pass table tr td.td2 span{ color:Red;  vertical-align:top;}
+#reset_pass table tr td.td1 p{ vertical-align:top; margin-top:8px;}

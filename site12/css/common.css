@@ -1,0 +1,67 @@
+.nav_links{
+	float:left;
+	padding-top: 10px;
+	padding-left: 10px;
+	margin-top:36px ;
+	margin-bottom:16px ;
+	margin-left: 17px;
+	font:14px Tahoma, Verdana, Arial, sans-serif;
+	width:260px;
+	height:236px;
+	background-color: #ffc000;
+
+	overflow:hidden;
+	border:1px solid #d7d7d7;
+
+}
+.nav_links p
+{
+    margin-top:6px;
+}
+.nav_links  A {
+	TEXT-ALIGN: center; DISPLAY: block; COLOR:#0066FF; cursor:pointer;
+}
+.nav_links  A:hover {
+	COLOR: #8bc540; TEXT-DECORATION: none;cursor:pointer;
+}
+
+
+.freetrial  A {
+	TEXT-ALIGN: center; DISPLAY: block; COLOR:#0066FF; cursor:pointer; font:19px Tahoma, Verdana, Arial, sans-serif;
+}
+.freetrial  A:hover {
+	COLOR: #8bc540; TEXT-DECORATION: none;cursor:pointer;
+}
+
+
+.nav_text1{
+	/*
+	 position:relative;
+	
+	left: 20%;
+	
+	
+	
+
+	text-align:center;
+	*/
+}
+
+.nav_text2{
+	
+	
+	font:18px Tahoma, Verdana, Arial, sans-serif;
+	
+	text-align:center;
+	
+}
+
+.nav_text3{
+	
+	
+	font:13px Tahoma, Verdana, Arial, sans-serif;
+	
+	text-align:center;
+	
+}
+

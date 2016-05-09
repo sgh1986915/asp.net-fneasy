@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://www.messagenet.com.au/dotnet/lodge.asmx?wsdl" docRef="http://www.messagenet.com.au/dotnet/lodge.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://www.messagenet.com.au/dotnet/lodge.asmx" xmlns:q1="http://www.messagenet.com.au/dotnet" binding="q1:LodgeSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://www.messagenet.com.au/dotnet/lodge.asmx" xmlns:q2="http://www.messagenet.com.au/dotnet" binding="q2:LodgeSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

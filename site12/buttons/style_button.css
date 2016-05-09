@@ -1,0 +1,88 @@
+button {
+border: 0 none;
+cursor: pointer;
+font-weight: bold;
+padding: 0 15px 0 0;
+text-align: center;
+height: 60px;
+line-height: 60px;
+width: 246px;
+}
+
+button span {
+display: block;
+padding: 0 0 0 15px;
+position: relative;
+white-space: nowrap;
+line-height: 60px;
+}
+
+button::-moz-focus-inner {
+border: none;
+}
+
+
+button.orange_btn {
+background: transparent url( btn_orange_right.png ) no-repeat scroll right top;
+clear: left;
+font-size: 1.3em;
+}
+
+button.orange_btn span {
+background: transparent url( btn_orange_left.png ) no-repeat scroll left top;
+color: #FFFFFF;
+}
+
+button.orange_btn:hover {
+background-position: 100% -60px;
+}
+
+button.orange_btn:hover span {
+background-position: 0% -60px;
+}
+
+
+
+
+button.green_btn {
+background: transparent url( btn_green_right.png ) no-repeat scroll right top;
+clear: left;
+font-size: 1.3em;
+}
+
+button.green_btn span {
+background: transparent url( btn_green_left.png ) no-repeat scroll left top;
+color: #FFFFFF;
+    width: 231px;
+}
+
+button.green_btn:hover {
+background-position: 100% -60px;
+}
+
+button.green_btn:hover span {
+background-position: 0% -60px;
+}
+
+
+
+
+
+button.red_btn {
+background: transparent url( btn_red_right.png ) no-repeat scroll right top;
+clear: left;
+font-size: 1.3em;
+}
+
+button.red_btn span {
+background: transparent url( btn_red_left.png ) no-repeat scroll left top;
+color: #FFFFFF;
+}
+
+button.red_btn:hover {
+background-position: 100% -60px;
+}
+
+button.red_btn:hover span {
+background-position: 0% -60px;
+}

@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.messagenet.com.au/dotnet" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s1="http://www.messagenet.com.au/dotnet/AbstractTypes" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.messagenet.com.au/dotnet" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.messagenet.com.au/dotnet">
+      <s:element name="LodgeSMSMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeSMSMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LodgeSMSMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeWAPPush">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApplicationName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeWAPPushResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LodgeWAPPushResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeSMSMessageWithReply">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReplyType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReplyPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeSMSMessageWithReplyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LodgeSMSMessageWithReplyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeSMSMessageWithReplyXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReplyType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReplyPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeSMSMessageWithReplyXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LodgeSMSMessageWithReplyXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMessageStatusXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MsgID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMessageStatusXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMessageStatusXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeMMSMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MMSSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MMSMessageText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MMSContentBase64" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeMMSMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LodgeMMSMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeMultiMMSMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MMSSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MMSMessageText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MMSContentBase64" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MMSContent2Base64" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MMSContent3Base64" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeMultiMMSMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LodgeMultiMMSMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeMultiMMSMessageXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="docXML">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeMultiMMSMessageXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LodgeMultiMMSMessageXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeMultiMMSMessageXMLMSGID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="docXML">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeMultiMMSMessageXMLMSGIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LodgeMultiMMSMessageXMLMSGIDResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeFAXMessageXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FaxNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FaxSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CoverPageText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objFile" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objFile2" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objFile3" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeFAXMessageXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LodgeFAXMessageXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeMMSMessageByURL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MMSSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MMSMessageText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeMMSMessageByURLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LodgeMMSMessageByURLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="docXML">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LodgeXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeXMLbyArg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strdocXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LodgeXMLbyArgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LodgeXMLbyArgResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+    <s:schema targetNamespace="http://www.messagenet.com.au/dotnet/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LodgeSMSMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:LodgeSMSMessage" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:LodgeSMSMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="LodgeWAPPushSoapIn">
+    <wsdl:part name="parameters" element="tns:LodgeWAPPush" />
+  </wsdl:message>
+  <wsdl:message name="LodgeWAPPushSoapOut">
+    <wsdl:part name="parameters" element="tns:LodgeWAPPushResponse" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageWithReplySoapIn">
+    <wsdl:part name="parameters" element="tns:LodgeSMSMessageWithReply" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageWithReplySoapOut">
+    <wsdl:part name="parameters" element="tns:LodgeSMSMessageWithReplyResponse" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageWithReplyXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:LodgeSMSMessageWithReplyXML" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageWithReplyXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:LodgeSMSMessageWithReplyXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageStatusXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMessageStatusXML" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageStatusXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMessageStatusXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMMSMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:LodgeMMSMessage" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMMSMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:LodgeMMSMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMultiMMSMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:LodgeMultiMMSMessage" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMultiMMSMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:LodgeMultiMMSMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMultiMMSMessageXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:LodgeMultiMMSMessageXML" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMultiMMSMessageXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:LodgeMultiMMSMessageXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMultiMMSMessageXMLMSGIDSoapIn">
+    <wsdl:part name="parameters" element="tns:LodgeMultiMMSMessageXMLMSGID" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMultiMMSMessageXMLMSGIDSoapOut">
+    <wsdl:part name="parameters" element="tns:LodgeMultiMMSMessageXMLMSGIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LodgeFAXMessageXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:LodgeFAXMessageXML" />
+  </wsdl:message>
+  <wsdl:message name="LodgeFAXMessageXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:LodgeFAXMessageXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMMSMessageByURLSoapIn">
+    <wsdl:part name="parameters" element="tns:LodgeMMSMessageByURL" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMMSMessageByURLSoapOut">
+    <wsdl:part name="parameters" element="tns:LodgeMMSMessageByURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="LodgeXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:LodgeXML" />
+  </wsdl:message>
+  <wsdl:message name="LodgeXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:LodgeXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="LodgeXMLbyArgSoapIn">
+    <wsdl:part name="parameters" element="tns:LodgeXMLbyArg" />
+  </wsdl:message>
+  <wsdl:message name="LodgeXMLbyArgSoapOut">
+    <wsdl:part name="parameters" element="tns:LodgeXMLbyArgResponse" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="PhoneMessage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeWAPPushHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="ApplicationName" type="s:string" />
+    <wsdl:part name="URL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeWAPPushHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageWithReplyHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="PhoneMessage" type="s:string" />
+    <wsdl:part name="ReplyType" type="s:string" />
+    <wsdl:part name="ReplyPath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageWithReplyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageWithReplyXMLHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="PhoneMessage" type="s:string" />
+    <wsdl:part name="ReplyType" type="s:string" />
+    <wsdl:part name="ReplyPath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageWithReplyXMLHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageStatusXMLHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="MsgID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageStatusXMLHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMMSMessageHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="MMSSubject" type="s:string" />
+    <wsdl:part name="MMSMessageText" type="s:string" />
+    <wsdl:part name="FileName" type="s:string" />
+    <wsdl:part name="MMSContentBase64" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMMSMessageHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMultiMMSMessageHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="MMSSubject" type="s:string" />
+    <wsdl:part name="MMSMessageText" type="s:string" />
+    <wsdl:part name="FileName" type="s:string" />
+    <wsdl:part name="MMSContentBase64" type="s:string" />
+    <wsdl:part name="FileName2" type="s:string" />
+    <wsdl:part name="MMSContent2Base64" type="s:string" />
+    <wsdl:part name="FileName3" type="s:string" />
+    <wsdl:part name="MMSContent3Base64" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMultiMMSMessageHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeFAXMessageXMLHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="FaxNumber" type="s:string" />
+    <wsdl:part name="FaxSubject" type="s:string" />
+    <wsdl:part name="CoverPageText" type="s:string" />
+    <wsdl:part name="FileName" type="s:string" />
+    <wsdl:part name="objFile" type="s1:StringArray" />
+    <wsdl:part name="FileName2" type="s:string" />
+    <wsdl:part name="objFile2" type="s1:StringArray" />
+    <wsdl:part name="FileName3" type="s:string" />
+    <wsdl:part name="objFile3" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="LodgeFAXMessageXMLHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMMSMessageByURLHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="MMSSubject" type="s:string" />
+    <wsdl:part name="MMSMessageText" type="s:string" />
+    <wsdl:part name="URL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMMSMessageByURLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeXMLbyArgHttpGetIn">
+    <wsdl:part name="strdocXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeXMLbyArgHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="PhoneMessage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeWAPPushHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="ApplicationName" type="s:string" />
+    <wsdl:part name="URL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeWAPPushHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageWithReplyHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="PhoneMessage" type="s:string" />
+    <wsdl:part name="ReplyType" type="s:string" />
+    <wsdl:part name="ReplyPath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageWithReplyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageWithReplyXMLHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="PhoneMessage" type="s:string" />
+    <wsdl:part name="ReplyType" type="s:string" />
+    <wsdl:part name="ReplyPath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeSMSMessageWithReplyXMLHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageStatusXMLHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="MsgID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageStatusXMLHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMMSMessageHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="MMSSubject" type="s:string" />
+    <wsdl:part name="MMSMessageText" type="s:string" />
+    <wsdl:part name="FileName" type="s:string" />
+    <wsdl:part name="MMSContentBase64" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMMSMessageHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMultiMMSMessageHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="MMSSubject" type="s:string" />
+    <wsdl:part name="MMSMessageText" type="s:string" />
+    <wsdl:part name="FileName" type="s:string" />
+    <wsdl:part name="MMSContentBase64" type="s:string" />
+    <wsdl:part name="FileName2" type="s:string" />
+    <wsdl:part name="MMSContent2Base64" type="s:string" />
+    <wsdl:part name="FileName3" type="s:string" />
+    <wsdl:part name="MMSContent3Base64" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMultiMMSMessageHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeFAXMessageXMLHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="FaxNumber" type="s:string" />
+    <wsdl:part name="FaxSubject" type="s:string" />
+    <wsdl:part name="CoverPageText" type="s:string" />
+    <wsdl:part name="FileName" type="s:string" />
+    <wsdl:part name="objFile" type="s1:StringArray" />
+    <wsdl:part name="FileName2" type="s:string" />
+    <wsdl:part name="objFile2" type="s1:StringArray" />
+    <wsdl:part name="FileName3" type="s:string" />
+    <wsdl:part name="objFile3" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="LodgeFAXMessageXMLHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMMSMessageByURLHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="PhoneNumber" type="s:string" />
+    <wsdl:part name="MMSSubject" type="s:string" />
+    <wsdl:part name="MMSMessageText" type="s:string" />
+    <wsdl:part name="URL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeMMSMessageByURLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeXMLbyArgHttpPostIn">
+    <wsdl:part name="strdocXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LodgeXMLbyArgHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="LodgeSoap">
+    <wsdl:operation name="LodgeSMSMessage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an SMS one way via the MessageNet SMS Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeSMSMessageSoapIn" />
+      <wsdl:output message="tns:LodgeSMSMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeWAPPush">
+      <wsdl:input message="tns:LodgeWAPPushSoapIn" />
+      <wsdl:output message="tns:LodgeWAPPushSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReply">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an 2 way SMS via the MessageNet SMS Gateway. Reply Types include EMAIL, WWW, HTTP, TCP/IP, and HEADER.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeSMSMessageWithReplySoapIn" />
+      <wsdl:output message="tns:LodgeSMSMessageWithReplySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReplyXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an 2 way SMS via the MessageNet SMS Gateway using XML.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeSMSMessageWithReplyXMLSoapIn" />
+      <wsdl:output message="tns:LodgeSMSMessageWithReplyXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatusXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to check the status of a sent message using XML. Returns 0 on success. &gt; 0 see ErrorMsg.</wsdl:documentation>
+      <wsdl:input message="tns:GetMessageStatusXMLSoapIn" />
+      <wsdl:output message="tns:GetMessageStatusXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an MMS via the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeMMSMessageSoapIn" />
+      <wsdl:output message="tns:LodgeMMSMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMultiMMSMessage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send multiple MMS's via the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeMultiMMSMessageSoapIn" />
+      <wsdl:output message="tns:LodgeMultiMMSMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMultiMMSMessageXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send multiple MMS's via XML using the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeMultiMMSMessageXMLSoapIn" />
+      <wsdl:output message="tns:LodgeMultiMMSMessageXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMultiMMSMessageXMLMSGID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send multiple MMS's (including MSGID for tracking) via XML using the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeMultiMMSMessageXMLMSGIDSoapIn" />
+      <wsdl:output message="tns:LodgeMultiMMSMessageXMLMSGIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeFAXMessageXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an eFax using XML via the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeFAXMessageXMLSoapIn" />
+      <wsdl:output message="tns:LodgeFAXMessageXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessageByURL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an MMS by URL via the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeMMSMessageByURLSoapIn" />
+      <wsdl:output message="tns:LodgeMMSMessageByURLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeXML">
+      <wsdl:input message="tns:LodgeXMLSoapIn" />
+      <wsdl:output message="tns:LodgeXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeXMLbyArg">
+      <wsdl:input message="tns:LodgeXMLbyArgSoapIn" />
+      <wsdl:output message="tns:LodgeXMLbyArgSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LodgeHttpGet">
+    <wsdl:operation name="LodgeSMSMessage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an SMS one way via the MessageNet SMS Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeSMSMessageHttpGetIn" />
+      <wsdl:output message="tns:LodgeSMSMessageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeWAPPush">
+      <wsdl:input message="tns:LodgeWAPPushHttpGetIn" />
+      <wsdl:output message="tns:LodgeWAPPushHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReply">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an 2 way SMS via the MessageNet SMS Gateway. Reply Types include EMAIL, WWW, HTTP, TCP/IP, and HEADER.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeSMSMessageWithReplyHttpGetIn" />
+      <wsdl:output message="tns:LodgeSMSMessageWithReplyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReplyXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an 2 way SMS via the MessageNet SMS Gateway using XML.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeSMSMessageWithReplyXMLHttpGetIn" />
+      <wsdl:output message="tns:LodgeSMSMessageWithReplyXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatusXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to check the status of a sent message using XML. Returns 0 on success. &gt; 0 see ErrorMsg.</wsdl:documentation>
+      <wsdl:input message="tns:GetMessageStatusXMLHttpGetIn" />
+      <wsdl:output message="tns:GetMessageStatusXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an MMS via the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeMMSMessageHttpGetIn" />
+      <wsdl:output message="tns:LodgeMMSMessageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMultiMMSMessage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send multiple MMS's via the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeMultiMMSMessageHttpGetIn" />
+      <wsdl:output message="tns:LodgeMultiMMSMessageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeFAXMessageXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an eFax using XML via the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeFAXMessageXMLHttpGetIn" />
+      <wsdl:output message="tns:LodgeFAXMessageXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessageByURL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an MMS by URL via the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeMMSMessageByURLHttpGetIn" />
+      <wsdl:output message="tns:LodgeMMSMessageByURLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeXMLbyArg">
+      <wsdl:input message="tns:LodgeXMLbyArgHttpGetIn" />
+      <wsdl:output message="tns:LodgeXMLbyArgHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LodgeHttpPost">
+    <wsdl:operation name="LodgeSMSMessage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an SMS one way via the MessageNet SMS Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeSMSMessageHttpPostIn" />
+      <wsdl:output message="tns:LodgeSMSMessageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeWAPPush">
+      <wsdl:input message="tns:LodgeWAPPushHttpPostIn" />
+      <wsdl:output message="tns:LodgeWAPPushHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReply">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an 2 way SMS via the MessageNet SMS Gateway. Reply Types include EMAIL, WWW, HTTP, TCP/IP, and HEADER.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeSMSMessageWithReplyHttpPostIn" />
+      <wsdl:output message="tns:LodgeSMSMessageWithReplyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReplyXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an 2 way SMS via the MessageNet SMS Gateway using XML.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeSMSMessageWithReplyXMLHttpPostIn" />
+      <wsdl:output message="tns:LodgeSMSMessageWithReplyXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatusXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to check the status of a sent message using XML. Returns 0 on success. &gt; 0 see ErrorMsg.</wsdl:documentation>
+      <wsdl:input message="tns:GetMessageStatusXMLHttpPostIn" />
+      <wsdl:output message="tns:GetMessageStatusXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an MMS via the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeMMSMessageHttpPostIn" />
+      <wsdl:output message="tns:LodgeMMSMessageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMultiMMSMessage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send multiple MMS's via the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeMultiMMSMessageHttpPostIn" />
+      <wsdl:output message="tns:LodgeMultiMMSMessageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeFAXMessageXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an eFax using XML via the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeFAXMessageXMLHttpPostIn" />
+      <wsdl:output message="tns:LodgeFAXMessageXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessageByURL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Allows you to send an MMS by URL via the MessageNet Gateway.</wsdl:documentation>
+      <wsdl:input message="tns:LodgeMMSMessageByURLHttpPostIn" />
+      <wsdl:output message="tns:LodgeMMSMessageByURLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LodgeXMLbyArg">
+      <wsdl:input message="tns:LodgeXMLbyArgHttpPostIn" />
+      <wsdl:output message="tns:LodgeXMLbyArgHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LodgeSoap" type="tns:LodgeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LodgeSMSMessage">
+      <soap:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeSMSMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeWAPPush">
+      <soap:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeWAPPush" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReply">
+      <soap:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeSMSMessageWithReply" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReplyXML">
+      <soap:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeSMSMessageWithReplyXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatusXML">
+      <soap:operation soapAction="http://www.messagenet.com.au/dotnet/GetMessageStatusXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessage">
+      <soap:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeMMSMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMultiMMSMessage">
+      <soap:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeMultiMMSMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMultiMMSMessageXML">
+      <soap:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeMultiMMSMessageXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMultiMMSMessageXMLMSGID">
+      <soap:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeMultiMMSMessageXMLMSGID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeFAXMessageXML">
+      <soap:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeFAXMessageXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessageByURL">
+      <soap:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeMMSMessageByURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeXML">
+      <soap:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeXMLbyArg">
+      <soap:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeXMLbyArg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LodgeSoap12" type="tns:LodgeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LodgeSMSMessage">
+      <soap12:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeSMSMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeWAPPush">
+      <soap12:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeWAPPush" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReply">
+      <soap12:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeSMSMessageWithReply" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReplyXML">
+      <soap12:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeSMSMessageWithReplyXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatusXML">
+      <soap12:operation soapAction="http://www.messagenet.com.au/dotnet/GetMessageStatusXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessage">
+      <soap12:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeMMSMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMultiMMSMessage">
+      <soap12:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeMultiMMSMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMultiMMSMessageXML">
+      <soap12:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeMultiMMSMessageXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMultiMMSMessageXMLMSGID">
+      <soap12:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeMultiMMSMessageXMLMSGID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeFAXMessageXML">
+      <soap12:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeFAXMessageXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessageByURL">
+      <soap12:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeMMSMessageByURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeXML">
+      <soap12:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeXMLbyArg">
+      <soap12:operation soapAction="http://www.messagenet.com.au/dotnet/LodgeXMLbyArg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LodgeHttpGet" type="tns:LodgeHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="LodgeSMSMessage">
+      <http:operation location="/LodgeSMSMessage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeWAPPush">
+      <http:operation location="/LodgeWAPPush" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReply">
+      <http:operation location="/LodgeSMSMessageWithReply" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReplyXML">
+      <http:operation location="/LodgeSMSMessageWithReplyXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatusXML">
+      <http:operation location="/GetMessageStatusXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessage">
+      <http:operation location="/LodgeMMSMessage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMultiMMSMessage">
+      <http:operation location="/LodgeMultiMMSMessage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeFAXMessageXML">
+      <http:operation location="/LodgeFAXMessageXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessageByURL">
+      <http:operation location="/LodgeMMSMessageByURL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeXMLbyArg">
+      <http:operation location="/LodgeXMLbyArg" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LodgeHttpPost" type="tns:LodgeHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="LodgeSMSMessage">
+      <http:operation location="/LodgeSMSMessage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeWAPPush">
+      <http:operation location="/LodgeWAPPush" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReply">
+      <http:operation location="/LodgeSMSMessageWithReply" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeSMSMessageWithReplyXML">
+      <http:operation location="/LodgeSMSMessageWithReplyXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatusXML">
+      <http:operation location="/GetMessageStatusXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessage">
+      <http:operation location="/LodgeMMSMessage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMultiMMSMessage">
+      <http:operation location="/LodgeMultiMMSMessage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeFAXMessageXML">
+      <http:operation location="/LodgeFAXMessageXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeMMSMessageByURL">
+      <http:operation location="/LodgeMMSMessageByURL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LodgeXMLbyArg">
+      <http:operation location="/LodgeXMLbyArg" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Lodge">
+    <wsdl:port name="LodgeSoap" binding="tns:LodgeSoap">
+      <soap:address location="http://www.messagenet.com.au/dotnet/lodge.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LodgeSoap12" binding="tns:LodgeSoap12">
+      <soap12:address location="http://www.messagenet.com.au/dotnet/lodge.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LodgeHttpGet" binding="tns:LodgeHttpGet">
+      <http:address location="http://www.messagenet.com.au/dotnet/lodge.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LodgeHttpPost" binding="tns:LodgeHttpPost">
+      <http:address location="http://www.messagenet.com.au/dotnet/lodge.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
